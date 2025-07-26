@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compra ASH con USDT | Pasarela Segura</title>
+  <meta name="description" content="Compra Ash Token (ASH) enviando USDT. Recibe tus tokens automáticamente al confirmar el pago.">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcode.js/lib/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Compra <span class="ash">ASH</span></h1>
+      <p>Envía USDT y recibe ASH automáticamente</p>
+    </header>
+
+    <main>
+      <!-- Paso 1: Ingresar cantidad de ASH -->
+      <section class="step">
+        <h2>1. ¿Cuántos ASH quieres comprar?</h2>
+        <input type="number" id="ashAmount" placeholder="Ej: 5000" min="100" />
+      </section>
+
+      <!-- Paso 2: Mostrar USDT necesario -->
+      <section class="step">
+        <h2>2. Envía esta cantidad de USDT</h2>
+        <input type="text" id="usdtAmount" readonly placeholder="0.00 USDT" />
+        <p class="small">Incluye estimado de gas (~0.5 USDT)</p>
+      </section>
+
+      <!-- Paso 3: Dirección de destino -->
+      <section class="step">
+        <h2>3. Tu dirección BSC (BEP-20)</h2>
+        <input type="text" id="userAddress" placeholder="0x..." maxlength="42" />
+        <p class="small">A esta dirección recibirás los ASH</p>
+      </section>
+
+      <!-- Paso 4: Dirección de pago y QR -->
+      <section class="step">
+        <h2>4. Envía los USDT aquí</h2>
+        <div class="address-box">
+          <div class="address" id="paymentAddress">0x72dA92a08a5a542929714858b2Cf56E8C581A937</div>
+          <div class="qrcode" id="qrcode"></div>
+        </div>
+        <p class="small">
+          🔐 Solo envía <strong>USDT en red BNB Chain (BEP-20)</strong>.<br>
+          No uses TRC-20 u otras redes. Pérdida permanente.
+        </p>
+      </section>
+
+      <!-- Botón de ayuda -->
+      <button id="copyBtn" class="btn-secondary">Copiar Dirección</button>
+    </main>
+
+    <footer>
+      <p>© 2025 Ash Token (ASH). Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="js/calculator.js"></script>
+</body>
+</html>
